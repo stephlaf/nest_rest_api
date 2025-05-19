@@ -10,35 +10,35 @@ export class UsersService {
       "id": 1,
       "name": "Gilles Serge",
       "email": "gilles@serge.ca",
-      "role": "admin"
+      "role": "ADMIN"
     },
     {
       "id": 2,
       "name": "Paul Lanoue",
       "email": "paul@lanoe.ca",
-      "role": "engineer"
+      "role": "ENGINEER"
     },
     {
       "id": 3,
       "name": "Solange Serge",
       "email": "solange@serge.ca",
-      "role": "intern"
+      "role": "INTERN"
     },
     {
       "id": 4,
       "name": "Rejean Serge",
       "email": "rejean@serge.ca",
-      "role": "intern"
+      "role": "INTERN"
     },
     {
       "id": 5,
       "name": "Marie-Josee Coache",
       "email": "mj@coache.ca",
-      "role": "intern"
+      "role": "INTERN"
     },
   ]
 
-  findAll(role?: 'intern' | 'engineer' | 'admin') {
+  findAll(role?: 'INTERN' | 'ENGINEER' | 'ADMIN') {
     if (role) {
       const rolesArray = this.users.filter(user => user.role === role)
       if (rolesArray.length === 0) throw new NotFoundException('No users with that role')
